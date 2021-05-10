@@ -6,10 +6,9 @@ blueprint = Blueprint('documented_api', __name__)
 
 api_extension = Api(
     blueprint,
-    title='Flask RESTplus Demo',
+    title='Best Match Restaurants',
     version='1.0',
-    description='Application tutorial to demonstrate Flask RESTplus extension\
-        for better project structure and auto generated documentation',
+    description='Application to help you find the best restaurant near to you.',
     doc='/'
 )
 
