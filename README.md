@@ -31,6 +31,8 @@ To run this application you have two options:
 
     - flask run
     - access in your browser http://127.0.0.1:5000/
+
+![alt text](https://github.com/c1c4/five-best_restaurants/blob/main/flask_run.png?raw=true)
     
 If you don't have or can't install the virtual environment, or has problemas with pip here the documentation:
 
@@ -48,6 +50,8 @@ If you don't have or can't install the virtual environment, or has problemas wit
 
     - docker-compose up --build
     - access in your browser http://127.0.0.1:5000/
+
+![alt text](https://github.com/c1c4/five-best_restaurants/blob/main/docker_compose_up.png?raw=true)
     
 If you don't have or can't install the docker, or docker-compose here the documentation:
 
@@ -56,6 +60,8 @@ If you don't have or can't install the docker, or docker-compose here the docume
 
 
 It's designed with a swagger page to test accordingly the criterias **Restaurant Name, Customer Rating, Distance, Price, Cuisine.**
+
+![alt text](https://github.com/c1c4/five-best_restaurants/blob/main/search.png?raw=true)
 
 - #Assumptions:
   - If you don't pass any parameter return a empty list, assuming at least one param is mandatory.
