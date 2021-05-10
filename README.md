@@ -3,6 +3,8 @@
 This application has the purpose to test the search for the restaurants in csv files **restaurants.csv**
 and **cuisines.csv**.
 
+All the criterias are completed.
+
 This application needs:
 
 - Flask
@@ -45,7 +47,7 @@ If you don't have or can't install the virtual environment, or has problemas wit
     
 - Open your terminal go to application folder and run the command:
 
-    - docker-compose up 
+    - docker-compose up --build
     - access in your browser http://127.0.0.1:5000/
     
 If you don't have or can't install the docker, or docker-compose here the documentation:
@@ -54,4 +56,10 @@ If you don't have or can't install the docker, or docker-compose here the docume
  - For docker-compose https://docs.docker.com/compose/install/
 
 
+It's designed with a swagger page to test accordingly the criterias **Restaurant Name, Customer Rating, Distance, Price, Cuisine.**
+
+- #Assumptions:
+  - If you don't pass any parameter return a empty list.
+  - If pass only one character e.g.: 'C' will assume the first he find.
+  - All number stay in float in any case some information has decimal values.
     
