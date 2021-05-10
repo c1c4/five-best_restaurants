@@ -6,7 +6,6 @@ and **cuisines.csv**.
 All the criterias are completed.
 
 This application needs:
-
 - Flask
 - flask-restplus
 - Werkzeug
@@ -59,7 +58,7 @@ If you don't have or can't install the docker, or docker-compose here the docume
 It's designed with a swagger page to test accordingly the criterias **Restaurant Name, Customer Rating, Distance, Price, Cuisine.**
 
 - #Assumptions:
-  - If you don't pass any parameter return a empty list.
+  - If you don't pass any parameter return a empty list, assuming at least one param is mandatory.
   - If pass only one character e.g.: 'C' will assume the first he find.
   - All number stay in float in any case some information has decimal values.
     

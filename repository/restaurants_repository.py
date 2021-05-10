@@ -15,6 +15,21 @@ class RestaurantsRepository:
         return return_csv_as_list_of_dicts('restaurants')
 
     def load_restaurants_by_params(self, name, customer_rating, distance, price, cuisine_id):
+        """
+        Filter restaurant by params
+
+        :param name: filter equal or match
+
+        :param customer_rating: filter equal or greater
+
+        :param distance: filter equal or lesser
+
+        :param price: filter equal or lesser
+
+        :param cuisine_id: filter equal
+
+        :return: Return a list of object of type Restaurants
+        """
         filtered_list = []
         if name is not None:
             filtered_list = [res for res in self.restaurants_list if res.name.lower().__contains__(name.lower())]

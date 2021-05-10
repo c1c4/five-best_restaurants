@@ -1,5 +1,9 @@
 from flask_restplus import Namespace, fields, Resource, reqparse
 
+"""
+Responsible for the restaurant documentation page tell what model is used and how can you filter the restaurants
+"""
+
 namespace = Namespace('restaurants', 'Restaurants related endpoints')
 
 restaurant_model = namespace.model('Restaurant', {

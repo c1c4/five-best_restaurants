@@ -3,6 +3,19 @@ from repository.restaurants_repository import RestaurantsRepository
 
 
 def get_restaurants(name=None, customer_rating=None, distance=None, price=None, cuisine_name=None) -> list:
+    """
+    Method that will find the cuisine_id by the name of cuisine.
+    Filter all restaurants accordingly to the params.
+    Sorted list with the criteria distance -> customer_rating -> price -> custom
+    If have more than 5 results just resturn the first 5.
+
+    :param name: Restaurants name
+    :param customer_rating: Evaluation about the restaurant
+    :param distance: Distance between the restaurant and the building you are
+    :param price: Price of the plate per person
+    :param cuisine_name: Type of cuisine e.g: Chinese
+    :return: A sorted list only 5 or less. If don't find anything
+    """
     cuisine_id = None
 
     if cuisine_name:
@@ -28,6 +41,15 @@ def get_restaurants(name=None, customer_rating=None, distance=None, price=None, 
 
 
 def sort_restaurants(list_restaurants: list, sort_method):
+    """
+    A recursive method will sort a list of restaurants if have more than one item.
+    Based on the criteria distance -> if we find 2 items with the same distance we call again
+    the method and change the sorted method to customer_rating and so on until he get the custom sorted
+
+    :param list_restaurants: list of restaurants
+    :param sort_method: what type of sorted
+    :return: list of restaurant sorted by distance or customer_rating or price or custom
+    """
     if sort_method == 'distance':
         filtered_restaurants = sorted(list_restaurants, key=lambda res: res.distance)
         first_restaurant = filtered_restaurants[0]
